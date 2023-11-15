@@ -16,7 +16,7 @@ const Login = () => {
             const foundUser = users.find((user) => user.email === email && user.password === password);
 
             if (foundUser) {
-                navigate('/home');
+                navigate('/dashboard');
             } else {
                 alert('Invalid credentials. Please try again.');
             }
