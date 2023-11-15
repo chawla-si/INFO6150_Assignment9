@@ -1,20 +1,23 @@
 import React from 'react';
 import Card from '../Card/Card.js';
+import './Home.css';
 
 const Home = () => {
-  const cardsData = [
-    { title: 'Home Card 1', description: 'Description 1 for Home' },
-    { title: 'Home Card 2', description: 'Description 2 for Home' },
+  const dynamicCards = [
+    { title: 'Product Development', description: 'Explore our latest products and innovations.' },
+    { title: 'Customer Success Stories', description: 'Discover how our products are making an impact.' },
+    { title: 'Tech Talks and Webinars', description: 'Join our informative tech sessions and webinars.' },
   ];
 
   return (
-    <div>
-      <h1>Home Page</h1>
-      {cardsData.map((card, index) => (
-        <Card key={index} {...card} />
+    <div className="home">
+      <h1>Welcome to Our Company</h1>
+      {dynamicCards.map((card, index) => (
+        <Card key={index} title={card.title} description={card.description} />
       ))}
     </div>
   );
 };
+
 
 export default Home;
